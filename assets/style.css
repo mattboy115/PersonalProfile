@@ -15,7 +15,6 @@ body {
     margin: 0;
     padding: 0;
     padding-top: 80px;
-    padding-bottom: 80px;
     color: white;
 }
 /*nav bar*/
@@ -99,30 +98,59 @@ header h2 {
     font-size: 20px;
 }
 
-.full-width #email {
-    text-decoration: none;
-    color: white;
-}
-
-.full-width #email:hover {
-    text-decoration: underline;
-    color: blue;
-}
-
 #contact-info {
     float: left;
-    width: 40%;
-    border: solid red;
+    padding-left: 4%;
+    line-height: 2.5;
+    width:65%;
+    align-items: baseline;
+}
+
+#contact-info p a {
+  background-image: linear-gradient(#000000 ,#000000);
+  border-color: #adb1b8 #a2a6ac #8d9096;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 3px;
+  box-shadow: rgba(255,255,255,.6) 0 1px 0 inset;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Amazon Ember",Arial,sans-serif;
+  font-size: 14px;
+  font-size: 13px;
+  outline: 0;
+  padding: 0 11px;
+  text-decoration: none;
+  touch-action: manipulation;
+}
+
+#contact-info p a:active {
+  border-bottom-color: #a2a6ac;
+}
+
+#contact-info p a:hover {
+  border-bottom-color: #a2a6ac;
+}
+
+#contact-info p a:hover {
+  border-color: #a2a6ac #979aa1 #82858a;
+}
+
+#contact-info p a:focus {
+  border-color: #e77600;
+  box-shadow: rgba(228, 121, 17, .5) 0 0 3px 2px;
+  outline: 0;
 }
 
 #contact-photo {
     float: right;
-    width: 59%;
-    border: solid red;
+    width: 30%;
 }
 
 #image01 {
-    width: 30%;
+    width: 70%;
     border-radius: 20px
 }
 
@@ -160,9 +188,8 @@ header h2 {
 }
 
 footer {
+    margin-top: 40px;
     width: 100%;
-    position: fixed;
-    bottom: 0;
 }
 
 footer p {
