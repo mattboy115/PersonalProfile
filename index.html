@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="assets/style.css"/>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css"/>
+
     <title>Matt Lee's Portfolio</title>
 </head>
 <body>
@@ -14,13 +16,13 @@
             <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
-    <header>
-        <h1>I'm Matt Lee</h1>
-        <h2>Front-End Developer,
-        Video Game Programmer,
-        3D Artist, etc...</h2>
+    <header class="container-fluid d-flex align-items-center">
+        <img class="mx-auto" src="./images/PXL_20221013_172120965.jpg" alt="Matt Lee"/>
+        <h1>I'm <span>Matt Lee</span>, Full Stack Developer,
+            Video Game Programmer,
+            3D Artist, etc...</h1>
     </header>
-    <div class="full-width">
+    <div class="container full-width">
         <h3>A little about me: </h3>
         <p>I am currently a student at We Can Code IT, pursuing a 
             Certificate in Java and C#, where I am deepening my 
@@ -33,7 +35,7 @@
             that enhance the user experience while leveraging my design 
             background.</p>
     </div>
-    <div class="full-width">
+    <div class="container full-width">
         <h3>Some of the tools I can use: </h3>
         <ul>
             <li>Visual Studio</li>
@@ -43,7 +45,7 @@
             <li>Figma</li>
         </ul>
     </div>
-    <div class="full-width">
+    <div class="container full-width">
         <h3>Here are a few of my best projects: </h3>
         <div class="grid">
             <a target="_blank" href="https://mattboy115.github.io/scarymonkeyshow/"><img src="images/scarymonkey.png" alt="">The Scary Monkey Show website</a>
@@ -55,7 +57,8 @@
     <footer>
         <p>
             Website and all content contained created by Matt Lee. All rights reserved &#169;2024
-        </p>
+        </p><br>
+        <p><a href="">Github</a> | <a href="">LinkedIn</a> | <a href="">Email</a></p>
     </footer>
 </body>
 </html>
