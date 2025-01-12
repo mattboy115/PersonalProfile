@@ -235,6 +235,13 @@ footer p {
     padding: 20px;
 }
 
+footer a img {
+    height: 2rem;
+    margin-top: -5px;
+    margin-left: 3px;
+    filter: drop-shadow(.5px .5px .5px #ffffff);
+}
+
 .grey {
     background-color: rgb(70, 70, 70);
     padding-bottom: 5rem;
