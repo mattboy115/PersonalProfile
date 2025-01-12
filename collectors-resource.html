@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <script src="assets/js/bootstrap.bundle.min.js" defer></script>
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css"/>
+
+    <title>The Collector's Resource app</title>
+</head>
+<body>
+    <nav>
+        <button class="hamburger" aria-label="Toggle navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a><div></div></li>
+            <li><a href="projects.html">Projects</a><div></div></li>
+            <li><a href="contact.html">Contact</a><div></div></li>
+        </ul>
+    </nav>
+    <header>
+        <h1 class="other-page-titles">Projects</h1>
+    </header>
+
+    <div class=" container full-width">
+        <h3>Project Overview: </h3>
+        <p>A project developed </p>
+    </div>
+    <footer>
+        <p>
+            Website and all content contained created by Matt Lee. All rights reserved &#169;2024 <a href="">Github</a> | <a href="">LinkedIn</a> | <a href="">Email</a>
+        </p>
+    </footer>
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

@@ -4,38 +4,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <script src="assets/js/bootstrap.bundle.min.js" defer></script>
     <link rel="stylesheet" type="text/css" href="assets/css/style.css"/>
     <title>Contact</title>
 </head>
 <body>
     <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="contact.html">Contact</a></li>
+        <button class="hamburger" aria-label="Toggle navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a><div></div></li>
+            <li><a href="projects.html">Projects</a><div></div></li>
+            <li><a href="contact.html">Contact</a><div></div></li>
         </ul>
     </nav>
-    <header>
+    <header class="other-page-titles">
         <h1>Contact</h1>
     </header>
     <div class="full-width container">
         <h3>How to contact Matt: </h3>
-        <div id="contact-photo" style="display: grid; place-items: center;">
-            <img id="image01" src="images/matt_photo.jpg" alt="Picture of Matt"/>
-        </div>
-        <div id="contact-info">
-            <p>I'd really love to hear from you. If you think you have a job that meets my qualifications, send it my way.<br><br>
-                Name: Matt Lee<br>
-                <a id="email" href="mailto: matt.c.lee1990@gmail.com"><img style="height: 15px;" src="https://t4.ftcdn.net/jpg/06/24/61/59/360_F_624615981_0PQem0vEtkkPX7w1KV0v8g245hEko2eY.jpg" alt=""> matt.c.lee1990@gmail.com</a> <br>
-                <a href="www.linkedin.com/in/matt-c-lee">LinkedIn Profile</a>
-            </p>
+        <div class="row info-row">
+            <div id="contact-photo" style="display: grid; place-items: center;">
+                <img id="image01" src="images/matt_photo.jpg" alt="Picture of Matt"/>
+            </div>
+            <div id="contact-info">
+                <p>I'd really love to hear from you. If you think you have a job that meets my qualifications, send it my way.<br><br>
+                    Name: Matt Lee<br>
+                    <a id="email" href="mailto: matt.c.lee1990@gmail.com"><img style="height: 15px;" src="https://t4.ftcdn.net/jpg/06/24/61/59/360_F_624615981_0PQem0vEtkkPX7w1KV0v8g245hEko2eY.jpg" alt=""> matt.c.lee1990@gmail.com</a> <br>
+                    <a href="www.linkedin.com/in/matt-c-lee">LinkedIn Profile</a><br>
+                    <a href="https://github.com/mattboy115">Github</a>
+                </p>
+            </div>
         </div>
     </div>
     <footer>
         <p>
-            Website and all content contained created by Matt Lee. All rights reserved &#169;2024
-        </p><br>
-        <p><a href="">Github</a> | <a href="">LinkedIn</a> | <a href="">Email</a></p>
+            Website and all content contained created by Matt Lee. All rights reserved &#169;2024 <a href=""><img src="./images/github-logo.png" alt=""></a> | <a href=""><img src="./images/linkedIn.png" alt=""></a> | <a href=""><img src="./images/gmail.png" alt=""></a>
+        </p>
     </footer>
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
 </body>
 </html>

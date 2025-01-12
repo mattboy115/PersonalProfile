@@ -26,7 +26,7 @@ nav {
     padding: 20px 0;
 }
 
-nav ul {
+.nav-links {
     list-style: none;
     padding: 5px;
     text-align: right;
@@ -37,23 +37,62 @@ nav ul li {
     padding: 3px;
     padding-left: 2%;
     padding-right: 2%;
-    display: inline;
+    display: inline-block;
+    position: relative;
+}
+
+nav ul li div {
+    height: 0;
+    display: block;
+    border-top: #004d40 solid;
+    padding: 0;
+    margin: 0;
+    transform: scaleX(0); 
+    transform-origin: center;
+    transition: transform 0.25s ease-in-out;
+    bottom: 0; /* Align it to the bottom of the `li` */
+    left: 0; /* Start from the left of the `li` */
+    border-radius: 3px;
+}
+
+nav ul li:hover div {/* Optional: Change text color on hover */
+    transform: scaleX(1);
 }
 
 nav ul li a {
+    display: block;
     font-size: 20px;
     text-decoration: none;
     color: rgb(1, 170, 127);
     font-family: Bebas;
-    padding: 7px;
-    transition: .5s;
+    transition: color .5s ease;
 }
-/*Nav hover effects*/
-nav ul li a:hover {
-    transition: .5s;
-    color: black;
-    background-color: white;
+
+nav ul li:hover a {
+    color: #004d40; /* Example: slightly darker green */
 }
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 0.3rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: .7rem;
+    border: 1px rgb(1, 170, 127) solid;
+    border-radius: 5px;
+    margin-left: 1rem;
+    box-shadow: 1px 1px 0 rgb(104, 104, 104);
+}
+
+.hamburger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: rgb(1, 170, 127);
+}
+
 /*Header*/
 header { 
     text-align: center;
@@ -61,6 +100,10 @@ header {
     flex-direction: column;
     padding-top: 5rem;
     gap: 2rem;
+}
+
+.header-home {
+    height: 100vh;
 }
 
 header img {
@@ -88,71 +131,58 @@ span {
     color: rgb(0, 128, 73);
 }
 
-.full-width {
-    margin: 5%;
-    color: white;
+.container {
+    padding-top: 5rem;
 }
 
-.full-width h3 {
+.container li {
+    list-style: none;
+}
+
+.container h3 {
     font-family: Bebas;
     font-size: 30px;
     letter-spacing: .2rem;
     width: 100%;
 }
 
-.full-width p {
+.container p {
     font-size: 20px;
 }
 
-#contact-info {
-    float: left;
-    padding-left: 4%;
-    line-height: 2.5;
-    width:65%;
-    align-items: baseline;
+.container .skills {
+    flex-wrap: wrap;
+}
+
+.skills li {
+    font-size: 20px;
+}
+
+.info-row {
+    border: white 1px solid;
+    padding: 1rem;
+    border-radius: 1rem;
+    box-shadow: 1px 2px 2px#004d40;
+    margin-top: 3rem;
 }
 
 #contact-info p a {
-  background-image: linear-gradient(#000000 ,#000000);
-  border-color: #adb1b8 #a2a6ac #8d9096;
-  border-style: solid;
-  border-width: 1px;
-  border-radius: 3px;
-  box-shadow: rgba(255,255,255,.6) 0 1px 0 inset;
-  box-sizing: border-box;
-  color: #ffffff;
-  cursor: pointer;
-  display: inline-block;
-  font-family: "Amazon Ember",Arial,sans-serif;
-  font-size: 14px;
-  font-size: 13px;
-  outline: 0;
-  padding: 0 11px;
-  text-decoration: none;
-  touch-action: manipulation;
-}
-
-#contact-info p a:active {
-  border-bottom-color: #a2a6ac;
-}
-
-#contact-info p a:hover {
-  border-bottom-color: #a2a6ac;
-}
-
-#contact-info p a:hover {
-  border-color: #a2a6ac #979aa1 #82858a;
-}
-
-#contact-info p a:focus {
-  border-color: #e77600;
-  box-shadow: rgba(228, 121, 17, .5) 0 0 3px 2px;
-  outline: 0;
+    display: inline-block;
+    border: white solid 1px;
+    border-radius: 5px;
+    padding: .5rem;
+    margin-bottom: 1rem;
+    text-decoration: none;
+    color: white;
+    font-size: large;
 }
 
 #contact-photo {
-    float: right;
     width: 30%;
+}
+
+#contact-info {
+    width: 70%;
 }
 
 #image01 {
@@ -165,7 +195,6 @@ span {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    padding: 10px;
 }
 
 .grid a {
@@ -206,6 +235,62 @@ footer p {
     padding: 20px;
 }
 
+footer a img {
+    height: 2rem;
+    margin-top: -5px;
+    margin-left: 3px;
+    filter: drop-shadow(.5px .5px .5px #ffffff);
+}
+
+.grey {
+    background-color: rgb(70, 70, 70);
+    padding-bottom: 5rem;
+}
+
+@media (max-width: 1920px) {
+
+    .container h3 {
+        font-size: 3em;
+    }
+
+    .container p {
+        font-size: 1.8em;
+    }
+}
+
+@media (max-width: 768px) {
+
+    nav {
+        height: fit-content;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: relative;
+        margin-top: -3rem;
+        right: 0;
+        transform: scaleY(0); /* Initial state: collapsed */
+        transform-origin: top;
+        transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    }
+
+    .nav-links.active {
+        display: flex;
+        transform: scaleY(1); /* Expanded state */
+        opacity: 1;
+    }
+
+    nav ul li div {
+        display: none;
+    }
+
+}
+
 /* ######################## Phone Screen ########################### */
 
 @media (max-width: 500px){
@@ -216,16 +301,9 @@ footer p {
         color: rgb(0, 0, 0);
     }
 
-    header {
-        margin-top: 20px;
-    }
 
     header h1 {
-        font-size: 20px;;
-    }
-
-    header h2 {
-        font-size: 40px;
+        font-size: 20px;
     }
 
     nav { 
@@ -234,9 +312,7 @@ footer p {
         position: relative;
     }
 
-    nav ul li {
-        display: block;
-    }
+
 
     nav ul li a {
         transition: none;

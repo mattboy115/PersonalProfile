@@ -4,51 +4,76 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <script src="assets/js/bootstrap.bundle.min.js" defer></script>
     <link rel="stylesheet" type="text/css" href="assets/css/style.css"/>
 
     <title>Matt Lee's Portfolio</title>
 </head>
 <body>
     <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="contact.html">Contact</a></li>
+        <button class="hamburger" aria-label="Toggle navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a><div></div></li>
+            <li><a href="projects.html">Projects</a><div></div></li>
+            <li><a href="contact.html">Contact</a><div></div></li>
         </ul>
     </nav>
-    <header class="container-fluid d-flex align-items-center">
+    <header class="container-fluid d-flex align-items-center header-home">
         <img class="mx-auto" src="./images/PXL_20221013_172120965.jpg" alt="Matt Lee"/>
         <h1>I'm <span>Matt Lee</span>, Full Stack Developer,
             Video Game Programmer,
             3D Artist, etc...</h1>
     </header>
-    <div class="container full-width">
-        <h3>A little about me: </h3>
-        <p>I am currently a student at We Can Code IT, pursuing a 
-            Certificate in Java and C#, where I am deepening my 
-            knowledge and skills in software development. I am 
-            proficient in various programming languages and tools, 
-            including HTML, CSS, JavaScript, Java, GD Script, and design 
-            software like Figma and Photoshop. I am also working with 3D 
-            rendering in Blender and game development in Godot. My 
-            enthusiasm lies in creating user-friendly applications 
-            that enhance the user experience while leveraging my design 
-            background.</p>
-    </div>
-    <div class="container full-width">
-        <h3>Some of the tools I can use: </h3>
-        <ul>
-            <li>Visual Studio</li>
-            <li>Blender</li>
-            <li>Photoshop</li>
-            <li>Godot</li>
-            <li>Figma</li>
-        </ul>
+    <div class="container-fluid grey">
+        <div class="container full-width">
+            <h3>A little about me: </h3>
+            <p class="col-12">
+                I recently graduated from We Can Code IT bootcamp, where I got 
+                a certification in Full Stack Java Development and deepened my 
+                knowledge and skills in software development. I am 
+                proficient in various programming languages and tools, 
+                including HTML, CSS, JavaScript, Java, React, and design 
+                software like Figma and Photoshop. I am also working with 3D 
+                rendering in Blender and game development in Godot. My 
+                enthusiasm lies in creating user-friendly applications 
+                that enhance the user experience while leveraging my design 
+                background.
+            </p>
+        </div>
+        <div class="container full-width">
+            <h3>Some of my skills:</h3>
+            <div class="row skills">
+                <ul class="col-12 col-md-4">
+                    <li>Visual Studio</li>
+                    <li>Java</li>
+                    <li>React JS</li>
+                    <li>HTML/CSS</li>
+                    <li>Javascript</li>
+                </ul>
+                <ul class="col-12 col-md-4">
+                    <li>Bootstrap</li>
+                    <li>Version Control (Git/Github)</li>
+                    <li>UX Design</li>
+                    <li>Postman</li>
+                    <li>Figma</li>
+                </ul>
+                <ul class="col-12 col-md-4">
+                    <li>Godot game engine</li>
+                    <li>Blender</li>
+                    <li>Photoshop</li>
+                </ul>
+            </div>
+        </div>
     </div>
     <div class="container full-width">
         <h3>Here are a few of my best projects: </h3>
-        <div class="grid">
+        <div class="row grid">
             <a target="_blank" href="https://mattboy115.github.io/scarymonkeyshow/"><img src="images/scarymonkey.png" alt="">The Scary Monkey Show website</a>
+            <a href="./collectors-resource.html"><img src="images/cr-screenshot.png" alt="">The Collector's Resource app for collectors (2024-Ongoing)</a>
             <a target="_blank" href="https://www.dropbox.com/scl/fi/n5nfqofm3tme5vdjh4zam/cubes-pipe.png?rlkey=0fv048c2ljwm8nwpeunyhwz6n&st=1ephj7tt&dl=0"><img src="images/cubes pipe.png" alt="">Glass Cubes 3D Art</a>
             <a target="_blank" href="https://mattboy115.github.io/Donut-Clicker/"><img src="images/donut-clicker-screenshot.png" alt="">Donut Clicker App</a>
             <a target="_blank" href="https://www.dropbox.com/scl/fi/psf7d11xzxpw2gwt74sny/rubik-s-cube2.png?rlkey=pj1t8xniztwngsh9fxtnllkco&st=784xcy9h&dl=0"><img src="images/rubik's cube2.png" alt="">Rubik's Cube 3D Art</a>
@@ -56,9 +81,16 @@
     </div>
     <footer>
         <p>
-            Website and all content contained created by Matt Lee. All rights reserved &#169;2024
-        </p><br>
-        <p><a href="">Github</a> | <a href="">LinkedIn</a> | <a href="">Email</a></p>
+            Website and all content contained created by Matt Lee. All rights reserved &#169;2024 <a href=""><img src="./images/github-logo.png" alt=""></a> | <a href=""><img src="./images/linkedIn.png" alt=""></a> | <a href=""><img src="./images/gmail.png" alt=""></a>
+        </p>
     </footer>
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
 </body>
 </html>
