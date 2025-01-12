@@ -150,6 +150,27 @@ span {
     font-size: 20px;
 }
 
+.container li {
+    font-size: 1.5em;
+    list-style: circle;
+    margin-left: 5rem;
+}
+
+.green {
+    background-color: #004d40;
+    border-radius: 2rem;
+    padding: 4rem;
+}
+
+.row {
+    justify-content: center;
+}
+
+.row img {
+    max-width: 25rem;
+    margin-bottom: 3rem;
+}
+
 .container .skills {
     flex-wrap: wrap;
 }
