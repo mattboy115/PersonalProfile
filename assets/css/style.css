@@ -198,6 +198,10 @@ span {
     font-size: large;
 }
 
+#contact-info p a img {
+    margin: 5px;
+}
+
 #contact-photo {
     width: 30%;
 }
