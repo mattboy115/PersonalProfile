@@ -149,7 +149,7 @@ span {
 .container li {
     font-size: 1.5em;
     list-style: circle;
-    margin-left: 5rem;
+    margin-left: 3rem;
 }
 
 .green {
@@ -180,7 +180,9 @@ span {
     padding: 1rem;
     border-radius: 1rem;
     box-shadow: 1px 2px 2px#004d40;
+    margin: 2rem;
     margin-top: 3rem;
+    gap: 2rem;
 }
 
 #contact-info p a {
@@ -192,22 +194,25 @@ span {
     text-decoration: none;
     color: white;
     font-size: large;
+    width: 100%;
+    max-width: 15rem;
 }
 
 #contact-info p a img {
     margin: 5px;
+    height: 40px;
 }
 
 #contact-photo {
-    width: 30%;
+    width: 25%;
 }
 
 #contact-info {
-    width: 70%;
+    width: 65%;
 }
 
 #image01 {
-    width: 70%;
+    width: 100%;
     border-radius: 20px
 }
 
@@ -260,12 +265,28 @@ footer a img {
     height: 2rem;
     margin-top: -5px;
     margin-left: 3px;
-    filter: drop-shadow(.5px .5px .5px #ffffff);
+}
+
+.break {
+    display: none;
 }
 
 .grey {
     background-color: rgb(70, 70, 70);
     padding-bottom: 5rem;
+}
+
+.resume {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.row iframe {
+    height: 30rem;
+    max-width: 55rem;
+    width: 100%;
 }
 
 @media (max-width: 1920px) {
@@ -283,6 +304,7 @@ footer a img {
     header { 
         padding-top: 3rem;
     }
+
     header img {
         border: white solid 10px;
         max-width: 18rem;
@@ -298,8 +320,67 @@ footer a img {
     }
 }
 
+@media (max-width: 1200px) {
+    header img {
+    border: white solid 10px;
+    max-width: 15rem;
+    }
+
+    header h1 {
+        font-size: 2.5em;
+        width: 79%;
+    }
+
+    .other-page-titles {
+        font-size: 4em;
+    }
+
+
+    #contact-info {
+        width: 60%;
+    }
+
+    #contact-photo {
+        width: 30%;
+    }
+}
+
 @media (max-width: 820px) {
-    
+    .grid {
+        justify-content: center;
+    }
+
+    .other-page-titles {
+        font-size: 3em;
+    }
+
+    .container h3 {
+        font-size: 2em;
+    }
+
+    .info-row {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 90%;
+        gap: 0;
+    }
+
+    #contact-photo {
+        width: 50%;
+        min-width: 20rem;
+    }
+
+    #contact-info {
+        width: 80%;
+    }
+
+    .green li {
+        font-size: large;
+        margin-left: -1rem;
+    }
 }
 
 @media (max-width: 768px) {
@@ -318,6 +399,8 @@ footer a img {
         flex-direction: column;
         position: relative;
         right: 0;
+        margin-right: .5rem;
+        margin-bottom: .5rem;
     }
 
     .nav-links.active {
@@ -328,6 +411,22 @@ footer a img {
     }
 
     nav ul li div {
+        display: none;
+    }
+
+    .break {
+        display: block;
+    }
+
+    .container {
+        text-align: center;
+    }
+    
+    .container li {
+        text-align: left;
+    }
+
+    .resume {
         display: none;
     }
 
@@ -342,7 +441,7 @@ footer a img {
 
 
     header h1 {
-        font-size: 3em;
+        font-size: 2em;
     }
 
     nav { 
@@ -350,12 +449,31 @@ footer a img {
         padding: 0;
     }
 
-
-
     nav ul li a {
         transition: none;
         padding: 2px;
     }
+
+    .info-row {
+        padding: 0;
+        margin-left: 5%;
+    }
+    
+    #contact-info p a {
+        font-size: medium;
+        width: 100%;
+    }
+
+    #contact-info p a img {
+        height: 2rem;
+    }
+
+    #contact-photo {
+        margin-top: 2rem;
+        width: 90%;
+        min-width: 10rem;
+    }
+
 }
 
 @media (max-width: 384px){
@@ -368,15 +486,18 @@ footer a img {
         font-size: x-large;
     }
 
+    .other-page-titles {
+        font-size: 2.5em;
+    }
+
     nav { 
         margin: 0;
         padding: 0;
     }
 
-
-
     nav ul li a {
         transition: none;
         padding: 2px;
     }
+
 }
