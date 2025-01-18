@@ -128,7 +128,8 @@ span {
 }
 
 .container {
-    padding-top: 5rem;
+    padding-top: 3rem;
+    width: 75%;
 }
 
 .container li {
@@ -164,6 +165,8 @@ span {
 
 .row img {
     max-width: 25rem;
+    min-width: 20rem;
+    width: 30%;
     margin-bottom: 3rem;
 }
 

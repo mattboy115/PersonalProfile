@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <script src="assets/js/bootstrap.bundle.min.js" defer></script>
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css"/>
+
+    <title>The Collector's Resource app</title>
+    <link rel="icon" type="image/x-icon" href="./images/favicon.png">
+</head>
+<body>
+    <nav>
+        <button class="hamburger" aria-label="Toggle navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a><div></div></li>
+            <li><a href="projects.html">Projects</a><div></div></li>
+            <li><a href="contact.html">Contact</a><div></div></li>
+        </ul>
+    </nav>
+    <header>
+        <h1 class="other-page-titles">Jac Enterprises</h1>
+    </header>
+
+    <div class=" container full-width">
+        <img style="width: 100%; margin-bottom: 3rem; border: solid white 4px;" src="./images/je-screenshot.png" alt="Jac Ent homepage">
+        <h3>Project Overview: </h3>
+        <p>
+            A project developed in the full time Java course at We Can Code IT coding bootcamp. This project is an educational app for 
+            kids that provides a fun and colorful way to learn. It includes challenging questions about math, art, and the animal kingdom. <br> 
+        </p>
+    </div>
+    <div class=" container full-width">
+        <h3>Features: </h3>
+        <p class="green">
+            This app features three different sections. Math, Art, and Animals. Each section has three different difficulties. Users can 
+            choose a section and begin answering questions. <br><br>
+            <img style="width: 100%; margin-bottom: 3rem;" src="./images/je-screenshot2.png" alt="Genre page">
+            <img style="width: 100%; margin-bottom: 3rem;" src="./images/je-screenshot3.png" alt="Catalogue">
+            <img style="width: 100%;" src="./images/je-screenshot4.png" alt="Collection page">
+        </p>
+    </div>
+    <div class=" container full-width">
+        <h3>What We Learned: </h3>
+        <p>
+            I personally learned a lot about React because this was my first real React project. The rest of the team leaned about 
+            user accounts and password encryption as well as strengthening their skills in Java backend mechanics.
+        </p>
+    </div>
+
+    <div class=" container full-width">
+        <h3>Mobile Screenshots: </h3>
+        <p>Mobile responsiveness has been implemented so that Jac Enterprises can be seamlessly used on phones and tablets as well as computers.</p>
+        <div class="row">
+            <img src="./images/je-screenshot5.png" alt="Mobile Homepage">
+            <img src="./images/je-screenshot6.png" alt="Mobile Animal Question">
+            <img src="./images/je-screenshot7.png" alt="Mobile Math Question">
+        </div>
+    </div>
+    <footer>
+        <p>
+            Website and all content contained created by Matt Lee. All rights reserved &#169;2024 
+            <br class="break"><br class="break">
+            <a target="_blank" href="https://github.com/mattboy115"><img src="./images/github-logo.png" alt=""></a> | 
+            <a target="_blank" href="http://www.linkedin.com/in/matt-c-lee"><img src="./images/linkedIn.png" alt=""></a> | 
+            <a id="email" href="mailto: matt.c.lee1990@gmail.com"><img src="./images/gmail.png" alt=""></a>
+        </p>
+    </footer>
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
