@@ -159,13 +159,13 @@ span {
     padding: 4rem;
 }
 
-.row {
+.image-row {
     justify-content: center;
 }
 
-.row img {
+.image-row img {
     max-width: 25rem;
-    min-width: 20rem;
+    min-width: 15rem;
     width: 30%;
     margin-bottom: 3rem;
 }
@@ -216,7 +216,7 @@ span {
 
 #image01 {
     width: 100%;
-    border-radius: 20px
+    border-radius: 20px;
 }
 
 .grid {
