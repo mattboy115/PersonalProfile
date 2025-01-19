@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <script src="assets/js/bootstrap.bundle.min.js" defer></script>
     <link rel="stylesheet" type="text/css" href="assets/css/style.css"/>
+    <link rel="stylesheet" href="assets/css/modal.css">
 
     <title>Matt Lee's Portfolio</title>
     <link rel="icon" type="image/x-icon" href="./images/favicon.png">
@@ -75,9 +76,21 @@
         <div class="grid">
             <a target="_blank" href="https://mattboy115.github.io/scarymonkeyshow/"><img src="images/scarymonkey.png" alt="">The Scary Monkey Show website</a>
             <a href="./collectors-resource.html"><img src="images/cr-screenshot.png" alt="">The Collector's Resource app for collectors (2024-Ongoing)</a>
-            <a target="_blank" href="https://www.dropbox.com/scl/fi/n5nfqofm3tme5vdjh4zam/cubes-pipe.png?rlkey=0fv048c2ljwm8nwpeunyhwz6n&st=1ephj7tt&dl=0"><img src="images/cubes pipe.png" alt="">Glass Cubes 3D Art</a>
+            <a ><img src="images/cubes pipe.png"
+                    alt="Thumbnail 1"
+                    class="thumbnail"
+                    data-bs-toggle="modal"
+                    data-bs-target="#imageModal"
+                    onclick="updateModalImage('images/cubes pipe.png' , 'Glass Cubes')">Glass Cubes 3D Art
+            </a>
             <a target="_blank" href="https://mattboy115.github.io/Donut-Clicker/"><img src="images/donut-clicker-screenshot.png" alt="">Donut Clicker App</a>
-            <a target="_blank" href="https://www.dropbox.com/scl/fi/psf7d11xzxpw2gwt74sny/rubik-s-cube2.png?rlkey=pj1t8xniztwngsh9fxtnllkco&st=784xcy9h&dl=0"><img src="images/rubik's cube2.png" alt="">Rubik's Cube 3D Art</a>
+            <a ><img src="images/rubiks cube2.png"
+                alt="Thumbnail 1"
+                class="thumbnail"
+                data-bs-toggle="modal"
+                data-bs-target="#imageModal"
+                onclick="updateModalImage('images/rubiks cube2.png' , 'Rubiks Cube')">Rubik's Cube 3D Art
+            </a>        
         </div>
     </div>
     <footer>
@@ -97,5 +110,40 @@
             navLinks.classList.toggle('active');
         });
     </script>
+    <script>
+        function updateModalImage(imageSrc, title) {
+            const modalImage = document.getElementById('modalImage');
+            const modalTitle = document.getElementById('imageModalLabel');
+
+            if (modalImage && modalTitle) {
+                modalImage.src = imageSrc;
+                modalTitle.textContent = title;
+            }
+        }
+    </script>
+
+    <div
+        class="modal fade"
+        id="imageModal"
+        tabindex="-1"
+        aria-labelledby="imageModalLabel"
+        aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="imageModalLabel">Image Preview</h5>
+                        <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"
+                            aria-label="Close">
+                        </button>
+                    </div>
+                    <div class="modal-body text-center">
+                        <img id="modalImage" src="" alt="Enlarged" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+    </div>
 </body>
 </html>

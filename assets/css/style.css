@@ -128,7 +128,8 @@ span {
 }
 
 .container {
-    padding-top: 5rem;
+    padding-top: 3rem;
+    width: 75%;
 }
 
 .container li {
@@ -164,6 +165,8 @@ span {
 
 .row img {
     max-width: 25rem;
+    min-width: 20rem;
+    width: 30%;
     margin-bottom: 3rem;
 }
 
@@ -231,7 +234,7 @@ span {
 }
 
 .grid a img {
-    width: 100%;
+    width: 300px;
     height: 170px;
     border: solid white 1px;
     margin-bottom: 10px;
@@ -472,6 +475,15 @@ footer a img {
         margin-top: 2rem;
         width: 90%;
         min-width: 10rem;
+    }
+
+    .grid a img {
+        width: 100%;
+        height:inherit;
+    }
+
+    .container {
+        width: 100%;
     }
 
 }

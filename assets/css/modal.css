@@ -1,0 +1,52 @@
+.modal-title {
+    color: rgb(1, 170, 127);
+    font-family: Bebas;
+    font-size: xx-large;
+}
+
+.modal-dialog {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.modal-content {
+    width: fit-content;
+}
+
+.modal-header {
+    width: 60rem;
+    padding-top: .5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.modal-body {
+    width: 60rem;
+}
+
+@media (max-width: 1200px) {
+    .modal-header {
+        width: 40rem;
+    }
+    
+    .modal-body {
+        width: 40rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .modal-header {
+        width: 35rem;
+    }
+    
+    .modal-body {
+        width: 35rem;
+    }
+}   
+
+@media (max-width: 680px) {
+    .modal, .fade {
+        display: none !important;
+    }
+}
