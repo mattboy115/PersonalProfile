@@ -153,6 +153,12 @@ span {
     margin-left: 3rem;
 }
 
+.blue {
+    background-color: #005070;
+    border-radius: 2rem;
+    padding: 4rem; 
+}
+
 .green {
     background-color: #004d40;
     border-radius: 2rem;
@@ -160,6 +166,10 @@ span {
 }
 
 .image-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2rem;
     justify-content: center;
 }
 
@@ -167,7 +177,7 @@ span {
     max-width: 25rem;
     min-width: 15rem;
     width: 30%;
-    margin-bottom: 3rem;
+    margin-bottom: 1rem;
 }
 
 .container .skills {
@@ -380,7 +390,7 @@ footer a img {
         width: 80%;
     }
 
-    .green li {
+    .blue li {
         font-size: large;
         margin-left: -1rem;
     }
@@ -485,6 +495,16 @@ footer a img {
     .container {
         width: 100%;
     }
+
+    .blue, .green {
+        width: 100vw;
+        border-radius: 0;
+        margin-left: -3%;
+        padding: 1.5rem;
+        padding-top: 2rem;
+        padding-bottom: 2rem;;
+    }
+
 
 }
 
