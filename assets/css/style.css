@@ -71,6 +71,18 @@ nav ul li:hover a {
     color: #004d40; /* Example: slightly darker green */
 }
 
+nav ul li:hover div {
+    transform: scaleX(1); /* Expands the line when hovered */
+}
+
+.grey-nav {
+    color: rgb(92, 92, 92);
+}
+
+.blue-nav {
+    color: rgb(42, 136, 165);
+}
+
 .hamburger {
     display: none;
     flex-direction: column;
